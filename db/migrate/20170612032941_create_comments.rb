@@ -7,3 +7,4 @@ class CreateComments < ActiveRecord::Migration
       t.timestamp
     end
   end
+end
