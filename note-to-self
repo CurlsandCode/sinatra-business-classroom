@@ -1,0 +1,2 @@
+Make layout file dynamic by putting erb tags in the navbar for when page is changed.
+Also make header dynamic.
