@@ -20,28 +20,7 @@
       <div class="col-xs-12 col-sm-4">
         <div style="background-image: url('<%= student.photo_link %>');" class="student-card"></div>
       </div>
-      <div class="col-xs-12 col-sm-8">
-
-        <div class="container">
-          <div class="row row-content">
-            <div class="col-xs-6">
-              <h2><%= student.first_name %></h2>
-            </div>
-            <div class="col-xs-6">
-              <h3><%= student.major %></h3>
-            </div>
-          </div>
-        </div>
-        
-        <div class="container">
-          <div class="row row-content">
-            <div class="col-xs-8">
-              <%= student.last_name %>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+      <div class="col-xs-12 col-sm-8"><h3><%= "Hello how are you? I am trying to test out this div in bootstrap. Looks like a winner. Don't you think?" %></h3></div>
     </div>
   </div>
   
