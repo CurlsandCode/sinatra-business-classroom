@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row row-content">
+    <p class="navclear"></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-content">
+    <div class="col-xs-12">
+      <h1 class="text-center">Student's Index</h1>
+    </div>
+  </div>
+</div>
+
+<% students =  ["http://imgur.com/jgbL2Sx.jpg", "http://imgur.com/2KFsJfe.jpg", "http://i.imgur.com/FXJiQcy.jpg", "http://i.imgur.com/x1t2grP.jpg", "http://i.imgur.com/NUR4HFK.png", "http://imgur.com/RZt07dq.jpg", "http://i.imgur.com/z87cszh.jpg", "http://i.imgur.com/9ZCUerO.jpg"] %>
+
+<% students.each do |student_pic| %>
+  <div class="container">
+    <div class="row row-content">
+      <div class="col-xs-12 col-sm-4">
+        <div style="background-image: url('<%= student_pic %>');" class="student-card"></div>
+      </div>
+      <div class="col-xs-12 col-sm-8"><h3><%= "Hello how are you? I am trying to test out this div in bootstrap. Looks like a winner. Don't you think?" %></h3></div>
+    </div>
+  </div>
+  
+<% end %>
+
+

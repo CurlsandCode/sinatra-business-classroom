@@ -1,0 +1,27 @@
+img {
+  max-height: 100%;
+  width: auto;
+}
+
+.profile-picture {
+  height: 300px;
+  min-width: 200px;
+  max-width: 300px;
+  float: left;
+}
+
+.navclear{
+  padding: 45px;
+}
+
+.student-card {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 305px;
+  min-height: 400px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
