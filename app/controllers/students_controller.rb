@@ -5,4 +5,9 @@ class StudentsController < ApplicationController
     erb :"students/index"
   end
 
+  get "/students/:id" do
+    @student = Student.find(params[:id])
+    erb :"/students/show"
+  end
+
 end
