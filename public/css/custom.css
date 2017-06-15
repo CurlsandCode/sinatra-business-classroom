@@ -14,6 +14,10 @@ img {
   padding: 45px;
 }
 
+.footerclear{
+  padding: 20px;
+}
+
 .student-card {
   position: relative;
   background-position: center;
