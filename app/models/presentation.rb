@@ -7,4 +7,10 @@ class Presentation < ActiveRecord::Base
     link = self.youtube_link.split(/youtu.*\//)[1]
     'https://www.youtube.com/embed/' + link
   end
+
+  def student_name
+    first_name = self.student.first_name
+    last_name = self.student.last_name
+    first_name + " " + last_name
+  end
 end
