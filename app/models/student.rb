@@ -4,6 +4,10 @@ class Student < ActiveRecord::Base
   has_many :comments, through: :presentations
   has_secure_password
 
+  def initialize
+    @photo_link = "img/init_user.png"
+  end
+
   def comments_published
     Comment.find_by(:id => self.id)
   end
