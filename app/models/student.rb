@@ -15,4 +15,12 @@ class Student < ActiveRecord::Base
   def comments_published
     Comment.find_by(:id => self.id)
   end
+
+  def presentation_message(presentation)
+    if presentation.nil? || presentation.youtube_link.empty?
+      "Upload"
+    else
+      "Change"
+    end
+  end
 end

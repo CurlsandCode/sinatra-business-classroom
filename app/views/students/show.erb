@@ -48,17 +48,22 @@
                 <th class="text-right">status</th>
               </thead>
               <tbody>
+                <!--FIXME: Later add a method to set the class to "danger" for the tr elements when a presentation is late -->
                 <tr>
-                  <td>Individual Presentation</td>
-                  <td>06/20/2017</td>
-                  <td class="text-right">button</td>
+                  <td>Introduction Presentation</td>
+                  <td>08/20/2017</td>
+                  <!-- FIXME: Change the href to direct to the presentation/introduction/edit route; make hidden element to set type; check type -->
+                  <td class="text-right"><a class="btn btn-primary" href="/login"><%= @student.presentation_message(@introduction) %></a></td>
                 </tr>
               </tbody>
               <tbody>
-                <tr class="danger">
-                  <td>Individual Presentation</td>
-                  <td>06/20/2017</td>
-                  <td class="text-right">button</td>
+                <!--FIXME: Later add a method to set the class to "danger" for the tr elements when a presentation is late -->
+                <tr class="">
+                  <td>Presentation Assignment</td>
+                  <!-- FIXME: Later connect deadline from selected topic to this td element -->
+                  <td>10/10/2017</td>
+                  <!-- FIXME: Change the href to direct to the presentation/assignment/edit route; make hidden element to set type; check type -->
+                  <td class="text-right"><a class="btn btn-primary" href="/login"><%= @student.presentation_message(@presentation) %></a></td>
                 </tr>
               </tbody>
             </table>

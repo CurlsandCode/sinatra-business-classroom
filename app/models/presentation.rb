@@ -13,4 +13,10 @@ class Presentation < ActiveRecord::Base
     last_name = self.student.last_name
     first_name + " " + last_name
   end
+
+  def assignment_message
+  end
+
+  def individual_message
+  end
 end
