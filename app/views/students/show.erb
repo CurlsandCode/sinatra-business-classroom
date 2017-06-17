@@ -84,9 +84,23 @@
   <div class="container">
     <div class="row row-content">
       <div class="col-xs-12 col-sm-5 text-center">
-        <h1>Student Presentation Video</h1>
+        <h1>Student Introduction Video</h1>
       </div>
     
+      <div class="col-xs-12 col-sm-5 text-center">
+        <p style="padding: 10px;"></p>
+        <!-- FIXME: There is a small bug for width in sm view  -->
+        <iframe width="534" height="300"src="<%= @introduction.youtube_embedded_link %>" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row row-content">
+      <div class="col-xs-12 col-sm-5 text-center">
+        <h1>Student Presentation Video</h1>
+      </div>
+
       <div class="col-xs-12 col-sm-5 text-center">
         <p style="padding: 10px;"></p>
         <!-- FIXME: There is a small bug for width in sm view  -->

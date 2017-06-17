@@ -7,6 +7,7 @@ class StudentsController < ApplicationController
 
   get "/students/:id" do
     @student = Student.find(params[:id])
+    @introduction= Presentation.find_by(:student_id => params[:id], :presentation_type => "assignment") # change presentation type to "introduction"
     @presentation = Presentation.find_by(:student_id => params[:id], :presentation_type => "assignment")
     erb :"/students/show"
   end
