@@ -38,6 +38,40 @@
           </div>
 
         </div>
+
+        <div class="row row-content">
+          <div class="col-xs-12 col-md-10 col-md-offset-0">
+            <table class="table table-hover">
+              <thead>
+                <th>topic</th>
+                <th>due date</th>
+                <th class="text-right">status</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Individual Presentation</td>
+                  <td>06/20/2017</td>
+                  <td class="text-right">button</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr class="danger">
+                  <td>Individual Presentation</td>
+                  <td>06/20/2017</td>
+                  <td class="text-right">button</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>Individual Presentation</td>
+                  <td>06/20/2017</td>
+                  <td class="text-right">button</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       
         <div class="row row-content">
           <div class="col-xs-10 col-xs-offset-2 col-sm-12 col-sm-offset-0">
@@ -56,11 +90,11 @@
 
   <div class="container">
     <div class="row row-content">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-5 text-center">
         <h1>Student Presentation Video</h1>
       </div>
     
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-5 text-center">
         <p style="padding: 10px;"></p>
         <iframe width="534" height="300" src="<%= @presentation.youtube_embedded_link %>" frameborder="0" allowfullscreen></iframe>
       </div>
