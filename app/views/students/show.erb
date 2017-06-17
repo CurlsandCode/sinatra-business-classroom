@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row row-content">
+  <div class="row">
     <p class="navclear"></p>
   </div>
 </div>
@@ -16,13 +16,13 @@
 <div class="container">
   <div class="row row-content">
     <div class="col-xs-12 col-sm-4">
-      <a href="www.google.com">
+      <a href="/student/<%= @student.id %>/photo/edit">
         <div style="background-image: url('<%= @student.photo_link %>');" class="student-card"></div>
       </a>
     </div>
     <div class="col-xs-12 col-sm-8">
 
-        <div class="row row-content">
+        <div class="row">
           
           <div class="col-xs-4 col-xs-offset-2 col-sm-4 col-sm-offset-0">
             <div class="row row-content">
@@ -39,7 +39,7 @@
 
         </div>
 
-        <div class="row row-content">
+        <div class="row">
           <div class="col-xs-12 col-md-10 col-md-offset-0">
             <table class="table table-hover">
               <thead>
@@ -61,25 +61,18 @@
                   <td class="text-right">button</td>
                 </tr>
               </tbody>
-              <tbody>
-                <tr>
-                  <td>Individual Presentation</td>
-                  <td>06/20/2017</td>
-                  <td class="text-right">button</td>
-                </tr>
-              </tbody>
             </table>
           </div>
         </div>
 
       
-        <div class="row row-content">
+        <div class="row">
           <div class="col-xs-10 col-xs-offset-2 col-sm-12 col-sm-offset-0">
             <!-- <h3>Home Country: <%# @student.country %></h3> -->
           </div>
         </div>
       
-        <div class="row row-content">
+        <div class="row">
           <div class="col-xs-10 col-xs-offset-2 col-sm-12 col-sm-offset-0">
             <!-- <h3>Major and stuff</h3> -->
           </div>
@@ -96,7 +89,8 @@
     
       <div class="col-xs-12 col-sm-5 text-center">
         <p style="padding: 10px;"></p>
-        <iframe width="534" height="300" src="<%= @presentation.youtube_embedded_link %>" frameborder="0" allowfullscreen></iframe>
+        <!-- FIXME: There is a small bug for width in sm view  -->
+        <iframe width="534" height="300"src="<%= @presentation.youtube_embedded_link %>" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>

@@ -40,3 +40,8 @@ img {
   margin: 20px auto;
   border-radius: 5px;
 }
+
+.row-content {
+  border-bottom: 1px ridge;
+}
+
