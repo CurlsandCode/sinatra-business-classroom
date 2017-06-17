@@ -8,6 +8,10 @@ class Student < ActiveRecord::Base
     @photo_link = "img/init_user.png"
   end
 
+  def full_name
+    self.first_name + " " + self.last_name
+  end
+
   def comments_published
     Comment.find_by(:id => self.id)
   end
