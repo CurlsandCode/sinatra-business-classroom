@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="row row-content">
+  <div class="row">
     <p class="navclear"></p>
   </div>
 </div>
 
 <div class="container">
-  <div class="row row-content">
+  <div class="row">
     <div class="col-xs-12">
       <h1 class="text-center">Presentation's Index</h1>
     </div>
@@ -14,7 +14,7 @@
 
 <% @presentations.each do |presentation| %>
   <div class="container">
-    <div class="row row-content">
+    <div class="row">
       <div class="col-xs-12 col-sm-6">
         <a href="www.google.com">
           <iframe width="534" height="300" src="<%= presentation.youtube_embedded_link %>" frameborder="0" allowfullscreen></iframe>
@@ -22,10 +22,10 @@
       </div>
       <div class="col-xs-12 col-sm-6">
 
-          <div class="row row-content">
+          <div class="row">
             <div class="col-xs-4 col-xs-offset-2 col-sm-4 col-sm-offset-0">
               
-              <div class="row row-content">
+              <div class="row">
                 <div class="col-xs-12">
                   <h2><%# student.first_name %></h2>
                   <h3><%# student.last_name%></h3>
@@ -38,7 +38,7 @@
             </div>
           </div>
         
-          <div class="row row-content">
+          <div class="row">
             <div class="col-xs-12">
               <%# Maybe a well here with a quote? %>
             </div>
