@@ -2,11 +2,13 @@ class PresentationsController < ApplicationController
 
   get "/presentations" do
     @presentations = Presentation.all.find_all{|presentation| presentation.presentation_type == "assignment"}
+    @title = "Assignment "
     erb :"presentations/index"
   end
 
   get "/introductions" do
     @presentations = Presentation.all.find_all{|presentation| presentation.presentation_type == "introduction"}
+    @title = "Introduction "
     erb :"presentations/index"
   end
 
