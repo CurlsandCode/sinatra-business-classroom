@@ -10,7 +10,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    redirect to :"/login" unless logged_in?
+    erb :index
   end
 
   get "/login" do

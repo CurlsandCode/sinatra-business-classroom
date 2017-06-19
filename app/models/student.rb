@@ -4,9 +4,9 @@ class Student < ActiveRecord::Base
   has_many :comments, through: :presentations
   has_secure_password
 
-  def initialize
-    @photo_link = "img/init_user.png"
-  end
+#   def initialize
+#     @photo_link = "img/init_user.png"
+#   end
 
   def full_name
     self.first_name + " " + self.last_name

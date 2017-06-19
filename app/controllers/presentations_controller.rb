@@ -1,7 +1,12 @@
 class PresentationsController < ApplicationController 
 
   get "/presentations" do
-    @presentations = Presentation.all
+    @presentations = Presentation.all.find_all{|presentation| presentation.presentation_type == "assignment"}
+    erb :"presentations/index"
+  end
+
+  get "/introductions" do
+    @presentations = Presentation.all.find_all{|presentation| presentation.presentation_type == "introduction"}
     erb :"presentations/index"
   end
 
@@ -15,10 +20,12 @@ class PresentationsController < ApplicationController
   end
   
   get "/presentations/assignment/edit" do
+    @presentation = Presentation.find_by(:student_id => session[:user_id], :presentation_type => "assignment")
     erb :"/presentations/assignment_edit"
   end
 
   get "/presentations/introduction/edit" do
+    @introduction = Presentation.find_by(:student_id =>session[:user_id], :presentation_type => "assignment") # change presentation type to "introduction"
     erb :"/presentations/introduction_edit"
   end
 end
