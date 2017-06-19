@@ -6,18 +6,19 @@
   <p class="navclear"></p>
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-      <form class="form-horizontal" action="" method="POST">
-      <div class="form-group">
-        <label for="presentation" class="col-sm-2 control-label">Presentation URL</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="presentation" placeholder="Presentation URL">
+      <form class="form-horizontal" action="/presentations/introduction" method="POST">
+        <div class="form-group">
+          <label for="presentation" class="col-sm-2 control-label">Presentation URL</label>
+          <div class="col-sm-10">
+            <input class="hidden" type="text" name="presentation_type" value="introduction">
+            <input type="text" class="form-control" id="presentation" placeholder="Presentation URL">
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-5">
-          <button type="submit" class="btn btn-default">Add Video</button>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-5">
+            <button type="submit" class="btn btn-default">Add Video</button>
+          </div>
         </div>
-      </div>
       </form>
     </div>
   </div>
