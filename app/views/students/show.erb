@@ -63,7 +63,7 @@
                   <!-- FIXME: Later connect deadline from selected topic to this td element -->
                   <td>10/10/2017</td>
                   <!-- FIXME: Change the href to direct to the presentation/assignment/edit route; make hidden element to set type; check type -->
-                  <td class="text-right"><a class="btn btn-primary" href="<%= (@assignment.nil?) ? "/presentations/assignment/new" : "/presentations/assignment/edit" %>"><%= @student.presentation_message(@presentation) %></a></td>
+                  <td class="text-right"><a class="btn btn-primary" href="<%= (@assignment.nil?) ? "/presentations/assignment/new" : "/presentations/assignment/edit" %>"><%= @student.presentation_message(@assignment) %></a></td>
                 </tr>
               </tbody>
             </table>
@@ -102,7 +102,7 @@
     </div>
   <% end %>
 
-  <% unless @presentation.nil? %>
+  <% unless @assignment.nil? %>
     <div class="container">
       <div class="row row-content">
         <div class="col-xs-12 col-sm-5 text-center">
@@ -112,7 +112,7 @@
         <div class="col-xs-12 col-sm-5 text-center">
           <p style="padding: 10px;"></p>
           <!-- FIXME: There is a small bug for width in sm view  -->
-          <iframe width="534" height="300"src="<%= @presentation.youtube_embedded_link %>" frameborder="0" allowfullscreen></iframe>
+          <iframe width="534" height="300"src="<%= @assignment.youtube_embedded_link %>" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>

@@ -39,12 +39,25 @@ class PresentationsController < ApplicationController
   
   get "/presentations/assignment/edit" do
     @presentation = Presentation.find_by(:student_id => session[:user_id], :presentation_type => "assignment")
+    binding.pry
     erb :"/presentations/assignment_edit"
   end
 
   get "/presentations/introduction/edit" do
     @introduction = Presentation.find_by(:student_id =>session[:user_id], :presentation_type => "introduction") # change presentation type to "introduction"
     erb :"/presentations/introduction_edit"
+  end
+
+  post "/assignment" do
+    presentation = Presentation.find_by(:student_id => session[:user_id], :presentation_type => "assignment")
+    presentation.update(:youtube_link => params[:presentation_url])
+    redirect to :"/students/#{session[:user_id]}"
+  end
+
+  post "/introduction" do
+    introduction = Presentation.find_by(:student_id =>session[:user_id], :presentation_type => "introduction") # change presentation type to "introduction"
+    introduction.update(:youtube_link => params[:presentation_url])
+    redirect to :"/students/#{session[:user_id]}"
   end
 
 end
