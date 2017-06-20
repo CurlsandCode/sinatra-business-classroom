@@ -32,6 +32,7 @@ class StudentsController < ApplicationController
   end
 
   post "/students" do
+    
   end
 
 end

@@ -17,7 +17,7 @@
   <div class="row row-content">
     <div class="col-xs-12 col-sm-4">
       <a href="/students/<%= @student.id %>/edit">
-        <div style="background-image: url('<%= @student.photo_link %>');" class="student-card"></div>
+        <div style="background-image: url('<%= @student.photo_link.nil? ? "/img/init_user.png" : @student.photo_link %>');" class="student-card"></div>
       </a>
     </div>
     <div class="col-xs-12 col-sm-8">
