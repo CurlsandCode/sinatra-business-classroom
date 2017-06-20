@@ -8,61 +8,61 @@
   
   <div class="row">
     <div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8">
-      <form class="form-horizontal" action="/students" method="post">
+      <form class="form-horizontal" action="/students/<%= @student.id %>" method="post">
         
       <div class="form-group">
         <label for="profile_pic_url" class="col-sm-4 control-label">Profile Picture URL</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="profile_pic_url" placeholder="Profile Picture URL">
+          <input type="text" class="form-control" id="profile_pic_url" placeholder="Profile Picture URL" name="student[photo_link]" value="<%= @student.photo_link %>">
         </div>
       </div>
 
       <div class="form-group">
         <label for="username" class="col-sm-4 control-label">Username</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="username" placeholder="Username">
+          <input type="text" class="form-control" id="username" placeholder="Username" name="student[username]" value="<%= @student.username %>">
         </div>
       </div>
 
       <div class="form-group">
         <label for="password" class="col-sm-4 control-label">Password</label>
         <div class="col-sm-8">
-          <input type="password" class="form-control" id="password" placeholder="Password">
+          <input type="password" class="form-control" id="password" placeholder="New Password" name="password">
         </div>
       </div>
 
       <div class="form-group">
         <label for="first_name" class="col-sm-4 control-label">First</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="first_name" placeholder="First Name">
+          <input type="text" class="form-control" id="first_name" placeholder="First Name" name="student[first_name]" value="<%= @student.first_name %>">
         </div>
       </div>
 
       <div class="form-group">
         <label for="last_name" class="col-sm-4 control-label">Last</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+          <input type="text" class="form-control" id="last_name" placeholder="Last Name" name="student[last_name]" value="<%= @student.last_name %>">
         </div>
       </div>
       
       <div class="form-group">
         <label for="nickname" class="col-sm-4 control-label">Nickname</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="nickname" placeholder="Nickname">
+          <input type="text" class="form-control" id="nickname" placeholder="Nickname" name="student[nickname]" value="<%= @student.nickname %>">
         </div>
       </div>
 
       <div class="form-group">
         <label for="email" class="col-sm-4 control-label">Email</label>
         <div class="col-sm-8">
-          <input type="email" class="form-control" id="email" placeholder="Email">
+          <input type="email" class="form-control" id="email" placeholder="Email" name="student[email]" value="<%= @student.email %>">
         </div>
       </div>
 
       <div class="form-group">
         <label for="major" class="col-sm-4 control-label">Major</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="major" placeholder="Major">
+          <input type="text" class="form-control" id="major" placeholder="Major" name="student[major]" value="<%= @student.major %>">
         </div>
       </div>
 

@@ -27,12 +27,15 @@ class StudentsController < ApplicationController
   end
 
   get "/students/:id/edit" do
+    redirect to "/students/#{params[:id]}" unless Student.find(params[:id]) == current_user
     @student = Student.find(params[:id])
     erb :"students/edit"
   end
 
-  post "/students" do
-    
+  post "/students/:id" do
+    @student = Student.find(params[:id])
+    @student.update(params[:student])
+    redirect "/students/#{params[:id]}"
   end
 
 end
