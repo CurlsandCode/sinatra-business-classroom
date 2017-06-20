@@ -18,8 +18,17 @@ class ApplicationController < Sinatra::Base
     erb :login
   end
 
-  get "/signup" do
-    erb :signup
+  get "/logout" do
+    session.destroy
+    redirect to :"/"
+  end
+
+  post "/login" do
+    student = Student.find_by(:email => params[:email])
+    if student && student.authenticate(params[:password])  
+      session[:user_id] = student.id
+    end
+    redirect to :"/"
   end
 
   helpers do
