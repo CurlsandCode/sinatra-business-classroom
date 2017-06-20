@@ -63,7 +63,7 @@
                   <!-- FIXME: Later connect deadline from selected topic to this td element -->
                   <td>10/10/2017</td>
                   <!-- FIXME: Change the href to direct to the presentation/assignment/edit route; make hidden element to set type; check type -->
-                  <td class="text-right"><a class="btn btn-primary" href="<%= (@introduction.nil?) ? "/presentations/assignment/new" : "/presentations/assignment/edit" %>"><%= @student.presentation_message(@presentation) %></a></td>
+                  <td class="text-right"><a class="btn btn-primary" href="<%= (@assignment.nil?) ? "/presentations/assignment/new" : "/presentations/assignment/edit" %>"><%= @student.presentation_message(@presentation) %></a></td>
                 </tr>
               </tbody>
             </table>

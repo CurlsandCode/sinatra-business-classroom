@@ -20,6 +20,22 @@ class PresentationsController < ApplicationController
   get "/presentations/introduction/new" do
     erb :"/presentations/introduction_new"
   end
+
+  post "/presentations/assignment" do
+    student = Student.find(session[:user_id])
+    assignment = Presentation.create(:presentation_type => "assignment", :youtube_link => params[:presentation_url])
+    student.presentations << assignment
+    student.save
+    redirect to :"/students/#{student.id}"
+  end
+
+  post "/presentations/introduction" do
+    student = Student.find(session[:user_id])
+    introduction = Presentation.create(:presentation_type => "introduction", :youtube_link => params[:presentation_url])
+    student.presentations << introduction 
+    student.save
+    redirect to :"/students/#{student.id}"
+  end
   
   get "/presentations/assignment/edit" do
     @presentation = Presentation.find_by(:student_id => session[:user_id], :presentation_type => "assignment")
@@ -27,7 +43,8 @@ class PresentationsController < ApplicationController
   end
 
   get "/presentations/introduction/edit" do
-    @introduction = Presentation.find_by(:student_id =>session[:user_id], :presentation_type => "assignment") # change presentation type to "introduction"
+    @introduction = Presentation.find_by(:student_id =>session[:user_id], :presentation_type => "introduction") # change presentation type to "introduction"
     erb :"/presentations/introduction_edit"
   end
+
 end
