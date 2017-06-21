@@ -1,5 +1,7 @@
 class Student < ActiveRecord::Base
   validates_presence_of :username, :first_name, :last_name, :email, presence: true
+  validates :email, uniqueness: true
+  validates :username, uniqueness: true
   validates :password, presence: true, on: :create
   has_many :presentations
   has_many :comments, through: :presentations
