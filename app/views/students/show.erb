@@ -45,7 +45,7 @@
               <thead>
                 <th>topic</th>
                 <th>due date</th>
-                <th class="text-right">status</th>
+                <% if @student == current_user %><th class="text-right">status</th><% end %>
               </thead>
               <tbody>
                 <!--FIXME: Later add a method to set the class to "danger" for the tr elements when a presentation is late -->
@@ -53,7 +53,9 @@
                   <td>Introduction Presentation</td>
                   <td>08/20/2017</td>
                   <!-- FIXME: Change the href to direct to the presentation/introduction/edit route; make hidden element to set type; check type -->
-                  <td class="text-right"><a class="btn btn-primary" href="<%= (@introduction.nil?) ? "/presentations/introduction/new" : "/presentations/introduction/edit" %>"><%= @student.presentation_message(@introduction) %></a></td>
+                  <% if @student == current_user %>
+                    <td class="text-right"><a class="btn btn-primary" href="<%= (@introduction.nil?) ? "/presentations/introduction/new" : "/presentations/introduction/edit" %>"><%= @student.presentation_message(@introduction) %></a></td>
+                  <% end %>
                 </tr>
               </tbody>
               <tbody>
@@ -63,7 +65,9 @@
                   <!-- FIXME: Later connect deadline from selected topic to this td element -->
                   <td>10/10/2017</td>
                   <!-- FIXME: Change the href to direct to the presentation/assignment/edit route; make hidden element to set type; check type -->
-                  <td class="text-right"><a class="btn btn-primary" href="<%= (@assignment.nil?) ? "/presentations/assignment/new" : "/presentations/assignment/edit" %>"><%= @student.presentation_message(@assignment) %></a></td>
+                  <% if @student == current_user %>
+                    <td class="text-right"><a class="btn btn-primary" href="<%= (@assignment.nil?) ? "/presentations/assignment/new" : "/presentations/assignment/edit" %>"><%= @student.presentation_message(@assignment) %></a></td>
+                  <% end %>
                 </tr>
               </tbody>
             </table>

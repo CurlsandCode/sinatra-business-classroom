@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
   end
 
   get "/students" do
+    redirect to "/" unless logged_in?
     @students = Student.all
     erb :"students/index"
   end

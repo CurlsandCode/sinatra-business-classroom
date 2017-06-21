@@ -1,5 +1,9 @@
 class PresentationsController < ApplicationController 
 
+  before do
+    redirect to "/" unless logged_in?
+  end
+
   get "/presentations" do
     @presentations = Presentation.all.find_all{|presentation| presentation.presentation_type == "assignment"}
     @title = "Assignment "
@@ -39,7 +43,6 @@ class PresentationsController < ApplicationController
   
   get "/presentations/assignment/edit" do
     @presentation = Presentation.find_by(:student_id => session[:user_id], :presentation_type => "assignment")
-    binding.pry
     erb :"/presentations/assignment_edit"
   end
 
@@ -59,5 +62,4 @@ class PresentationsController < ApplicationController
     introduction.update(:youtube_link => params[:presentation_url])
     redirect to :"/students/#{session[:user_id]}"
   end
-
 end
