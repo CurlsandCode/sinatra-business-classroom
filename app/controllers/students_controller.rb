@@ -39,4 +39,10 @@ class StudentsController < ApplicationController
     redirect "/students/#{params[:id]}"
   end
 
+  post "/students/:id/delete" do
+    Student.find(params[:id]).destroy
+    session.destroy
+    redirect to "/signup"
+  end
+
 end
