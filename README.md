@@ -1,4 +1,4 @@
-#Sinatra Business Classroom App
+# Sinatra Business Classroom App
 
 Welcome to the Sinatra Business Classroom App!
 
